@@ -1,8 +1,11 @@
-# Gunakan Emulator Android Studio : 
+# MOVIE APP 
+https://jsmastery.com/video-kit/e3732532-7d7f-4637-87d6-bb9a11c53596
+
+### Gunakan Emulator Android Studio : 
     1. Lihat daftar AVD	      emulator -list-avds
     2. Jalankan emulator          emulator -avd <nama_emulator>
 
-# Package :
+### Package :
 ##### Yang digunakan untuk mempermudah styling :
 - npm i nativewind tailwindcss react-native-reanimated react-native-safe-area-context
   - step instalasi : 
