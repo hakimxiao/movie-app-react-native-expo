@@ -2,6 +2,7 @@ import {View, Text, Image, FlatList, ActivityIndicator} from 'react-native'
 import {images} from "@/constants/images";
 import MovieCard from "@/components/MovieCard";
 import useFetch from "@/services/useFetch";
+import {updateSearchCount} from "@/services/appwrite";
 import {fetchMovies} from "@/services/api";
 import {icons} from "@/constants/icons";
 import SearchBar from "@/components/SearchBar";
@@ -22,10 +23,14 @@ const Search = () => {
     }), false)
 
     useEffect(() => {
+
         // saat melakukkan search kita dianjurkan memberikan waktu tunggu ketik agar saat kita fetch dia tidak fetch perdetik
         const timeoutId = setTimeout(async() => {
             if (searchQuery.trim()) {
                 await loadMovies();
+
+                if (movies?.length > 0 && movies?.[0])
+                 await updateSearchCount(searchQuery, movies[0]);
             } else {
                 reset();
             }
