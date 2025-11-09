@@ -1,11 +1,11 @@
 import {View, Text} from 'react-native'
 import React from 'react'
 
-const Saved = () => {
+const Save = () => {
     return (
         <View>
             <Text>Saved</Text>
         </View>
     )
 }
-export default Saved
+export default Save

@@ -16,6 +16,9 @@ https://jsmastery.com/video-kit/e3732532-7d7f-4637-87d6-bb9a11c53596
     - seteleah semua selesai anda tinggal restart terminal, dan untuk metro config file globals.css nya harus sesaui path nya
     - sekarang menjalankan nya cukup dengan ini :  npx expo start --clear
 
+- dev package :
+  - npm install --save @react-native-masked-view/masked-view
+
 ### Koponen Penting :
 - FlatList : untuk menampilkan banyak data
   -   Sederhana nya flatlist seperti Map selain untuk menampilkan data banyak props luar biasa di flatlist salah satunya :

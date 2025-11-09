@@ -9,7 +9,9 @@ import {icons} from "@/constants/icons";
 const TabIcon = ({focused, icon, title}: any) => {
     if(focused) {
         return (
-            <ImageBackground source={images.highlight} className="flex flex-row w-full flex-1 min-w-[112px] min-h-16 mt-4 justify-center items-center rounded-full overflow-hidden">
+            <ImageBackground
+                source={images.highlight}
+                className="flex flex-row w-full flex-1 min-w-[112px] min-h-14 mt-4 justify-center items-center rounded-full overflow-hidden">
                 <Image source={icon} tintColor="#151312" className="size-5" />
                 <Text className="text-secondary text-base font-semibold ml-2">{title}</Text>
             </ImageBackground>
@@ -37,7 +39,7 @@ const _Layout = () => {
                     alignItems: "center",
                 },
                 tabBarStyle: {
-                    backgroundColor: "#0f0D23",
+                    backgroundColor: "#0F0D23",
                     borderRadius: 50,
                     marginHorizontal: 20,
                     marginBottom: 36,
@@ -45,7 +47,7 @@ const _Layout = () => {
                     position: "absolute",
                     overflow: "hidden",
                     borderWidth: 1,
-                    borderColor: "#0f0D23"
+                    borderColor: "#0F0D23"
                 }
             }}
         >
@@ -55,13 +57,11 @@ const _Layout = () => {
                     title: "Home",
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (
-                        <>
                             <TabIcon
                                 focused={focused}
                                 icon={icons.home}
                                 title="Home"
                             />
-                        </>
                     )
                 }}
             />
@@ -71,29 +71,25 @@ const _Layout = () => {
                     title: "Search",
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (
-                        <>
                             <TabIcon
                                 focused={focused}
                                 icon={icons.search}
                                 title="Search"
                             />
-                        </>
                     )
                 }}
             />
             <Tabs.Screen
-                name="saved"
+                name="save"
                 options={{
-                    title: "Saved",
+                    title: "Save",
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (
-                        <>
                             <TabIcon
                                 focused={focused}
                                 icon={icons.save}
-                                title="Saved"
+                                title="Save"
                             />
-                        </>
                     )
             }}
             />
@@ -103,13 +99,11 @@ const _Layout = () => {
                     title: "Profile",
                     headerShown: false,
                     tabBarIcon: ({ focused }) => (
-                        <>
                             <TabIcon
                                 focused={focused}
                                 icon={icons.person}
                                 title="Profile"
                             />
-                        </>
                     )
             }}
             />
